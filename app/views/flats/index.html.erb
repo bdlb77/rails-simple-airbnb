@@ -1,8 +1,10 @@
-<h1>flats</h1>
 
 <div class="container">
   <div class="row">
-    <% @flats[1..6].each do |flat| %>
+  </div>
+  <div class="row">
+    <% @flats.each do |flat| %>
+      <%=link_to flat_path(flat) do %>
       <div class="col-sm-4">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
           <div class="card-category">Popular</div>
@@ -11,9 +13,10 @@
             <p><%= flat.address %></p>
           </div>
           <img class="card-user" src="https://kitt.lewagon.com/placeholder/users/tgenaitay">
-          <a class="card-link" href="#" ></a>
-          </div>
+          <%= link_to "delete", flat_path(flat), method: :delete %>
+        </div>
       </div>
+      <% end %>
     <% end %>
   </div>
 </div>

@@ -11,8 +11,9 @@
   </head>
 
   <body>
-    <%= render  'navbar' %>
+    <%= render  'layouts/navbar' %>
+    <%= render 'layouts/flash' %>
     <%= yield %>
-    <%= render 'footer' %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
